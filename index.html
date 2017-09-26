@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html ng-app="gemStore">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width">
+
+  <title>Gem Store</title>
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="products.js"></script>
+  
+</head>
+
+  
+
+<body ng-controller="StoreController as store">
+  <!--  Store Header  -->
+
+  <header>
+
+    <h1 class="text-center">Flatlander Crafted Gems</h1>
+
+    <h2 class="text-center">– an Angular store –</h2>
+
+  </header>
+
+  <div class="list-group">
+    <div class="list-group-item" ng-hide="store.product.soldOut" ng-repeat="product in store.products">
+
+        <!-- $index Practice:  -->
+
+        <h3 product-title></h3>
+
+        <h3><product-title> </product-title></h3>
+
+        <img ng-src="{{product.images[0].full}}">
+        
+        <button ng-show="product.canPurchase"> Add to Cart </button>
+        <product-panels><product-panels/>
+
+    </div>
+  </div>
+  
+
+
+
+
+
+</body>
+
+</html>
